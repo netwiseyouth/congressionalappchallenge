@@ -1,0 +1,302 @@
+body {
+    background-image: url('assets/Design.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: white; 
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    position: relative; 
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; 
+    height: 2px;
+    background-color: white; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+.navbar-links a:hover::after {
+    transform: scaleX(1); 
+}
+
+.intro-title {
+    font-size: 150px;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+    text-align: center;
+    margin-top: 150px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typing 4s steps(40) 1 normal both; 
+}
+
+.intro-subtitle {
+    font-size: 48px; 
+    color: white;
+    text-shadow: 4px 4px 10px black;
+    text-align: center;
+    margin-top: 20px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typingSubtitle 6s steps(50) 1 normal both; 
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes typingSubtitle {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    padding: 20px;
+    margin: 50px;
+    animation: fadeIn 1s ease-in;
+}
+
+.about-section, .why-we-started-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px black;
+    margin-top: 150px; 
+}
+
+.about-left, .why-we-started-left {
+    flex: 1;
+    font-size: 48px;
+    color: white; 
+    text-align: left;
+    animation: scrollFadeIn 1s ease-in forwards;
+}
+
+.about-right, .why-we-started-right {
+    flex: 2;
+    font-size: 20px;
+    color: white; 
+    text-align: left;
+    margin-left: 50px; 
+    animation: scrollFadeIn 1s ease-in forwards;
+}
+
+@keyframes scrollFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .about-section, .why-we-started-section {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .about-left, .about-right, .why-we-started-left, .why-we-started-right {
+        text-align: center;
+    }
+
+    .intro-title {
+        font-size: 60px; 
+    }
+
+    .intro-subtitle {
+        font-size: 28px; 
+    }
+}
+
+body {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 2px solid #4CAF50; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.contact-email {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lessons-section {
+    padding: 50px;
+    margin: 100px auto;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.lessons-section h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lesson {
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.lesson h3 {
+    font-size: 30px;
+    color: #4CAF50; 
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.lesson p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.lesson ul {
+    margin-left: 20px;
+    list-style: disc;
+    color: #333;
+}
+
+.lesson li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.lesson span {
+    font-weight: bold;
+    color: #333;
+}
+
+.cyberfishy-tip {
+    font-size: 18px;
+    background-color: #e7f5e1;
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #2d703b;
+}
+
+@media (max-width: 768px) {
+    .lessons-section {
+        padding: 30px;
+    }
+    
+    .lesson h3 {
+        font-size: 24px;
+    }
+    
+    .lesson p {
+        font-size: 16px;
+    }
+
+    .lesson ul {
+        margin-left: 15px;
+    }
+}

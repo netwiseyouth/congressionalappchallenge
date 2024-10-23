@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <style>
+        body {
+            background-image: url('assets/Design.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: white; 
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    position: relative; 
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; 
+    height: 2px;
+    background-color: white; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+.navbar-links a:hover::after {
+    transform: scaleX(1); 
+}
+        @keyframes navbarSlideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoShrink {
+            from {
+                transform: scale(1.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .exam-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #333;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .exam-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .exam-button:hover {
+            background-color: #45a049;
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/logo.jpeg" alt="NetWise Youth Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="contact.html">Contact Us</a> 
+        </div>
+    </div>
+
+    <div class="exam-container">
+        <h1>Ready for the Exam?</h1>
+        <p>Click the button below to start your exam.</p>
+        <a class="exam-button" href="https://forms.gle/AgeFx3scThmpKCcd9" target="_blank">Start Exam</a>
+    </div>
+
+</body>
+</html>
